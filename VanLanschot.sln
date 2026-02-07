@@ -1,0 +1,81 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanLanschot.AppHost", "VanLanschot.AppHost\VanLanschot.AppHost.csproj", "{A28A2388-A66D-487C-8827-4C46B1BFDC35}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanLanschot.ServiceDefaults", "VanLanschot.ServiceDefaults\VanLanschot.ServiceDefaults.csproj", "{C6EC2C67-F267-07F2-FA50-DC2639C84A19}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanLanschot.ApiService", "VanLanschot.ApiService\VanLanschot.ApiService.csproj", "{E6331284-33C0-63C0-B8B8-FB9898DAD6C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanLanschot.Web", "VanLanschot.Web\VanLanschot.Web.csproj", "{EB54A8FE-02D5-5B43-09DC-911482A56EC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanLanschot.Tests", "VanLanschot.Tests\VanLanschot.Tests.csproj", "{9AB8E60E-255D-84C3-1E12-057D3DF407F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Host", "1. Host", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. API", "2. API", "{09EEAE49-D2DA-447A-9801-E4BAF262E8B9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. FrontEnd", "3. FrontEnd", "{8212DE2C-E449-441F-9486-EC3AB1F90A77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "99. Tests", "99. Tests", "{4D6C15E8-F92C-4E42-A3B9-012C22DE6437}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Domain", "4. Domain", "{D5F90959-7D8E-4BD8-A7B9-2A32100C2F93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Infrastructure", "5. Infrastructure", "{F0373094-BDD4-4C67-8D84-1CBFD2993718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanLanschot.Core", "VanLanschot.Core\VanLanschot.Core.csproj", "{FB3180FE-1D35-4BE5-928F-6F4B142DAFFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanLanschot.Adapters", "VanLanschot.Adapters\VanLanschot.Adapters.csproj", "{F37CF960-A91C-4B22-995B-0EAEE08C5BF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A28A2388-A66D-487C-8827-4C46B1BFDC35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28A2388-A66D-487C-8827-4C46B1BFDC35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28A2388-A66D-487C-8827-4C46B1BFDC35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28A2388-A66D-487C-8827-4C46B1BFDC35}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6EC2C67-F267-07F2-FA50-DC2639C84A19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6EC2C67-F267-07F2-FA50-DC2639C84A19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6EC2C67-F267-07F2-FA50-DC2639C84A19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6EC2C67-F267-07F2-FA50-DC2639C84A19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6331284-33C0-63C0-B8B8-FB9898DAD6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6331284-33C0-63C0-B8B8-FB9898DAD6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6331284-33C0-63C0-B8B8-FB9898DAD6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6331284-33C0-63C0-B8B8-FB9898DAD6C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB54A8FE-02D5-5B43-09DC-911482A56EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB54A8FE-02D5-5B43-09DC-911482A56EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB54A8FE-02D5-5B43-09DC-911482A56EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB54A8FE-02D5-5B43-09DC-911482A56EC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AB8E60E-255D-84C3-1E12-057D3DF407F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB8E60E-255D-84C3-1E12-057D3DF407F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB8E60E-255D-84C3-1E12-057D3DF407F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB8E60E-255D-84C3-1E12-057D3DF407F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB3180FE-1D35-4BE5-928F-6F4B142DAFFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB3180FE-1D35-4BE5-928F-6F4B142DAFFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB3180FE-1D35-4BE5-928F-6F4B142DAFFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB3180FE-1D35-4BE5-928F-6F4B142DAFFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F37CF960-A91C-4B22-995B-0EAEE08C5BF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F37CF960-A91C-4B22-995B-0EAEE08C5BF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F37CF960-A91C-4B22-995B-0EAEE08C5BF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F37CF960-A91C-4B22-995B-0EAEE08C5BF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A28A2388-A66D-487C-8827-4C46B1BFDC35} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C6EC2C67-F267-07F2-FA50-DC2639C84A19} = {09EEAE49-D2DA-447A-9801-E4BAF262E8B9}
+		{E6331284-33C0-63C0-B8B8-FB9898DAD6C1} = {09EEAE49-D2DA-447A-9801-E4BAF262E8B9}
+		{EB54A8FE-02D5-5B43-09DC-911482A56EC1} = {8212DE2C-E449-441F-9486-EC3AB1F90A77}
+		{9AB8E60E-255D-84C3-1E12-057D3DF407F1} = {4D6C15E8-F92C-4E42-A3B9-012C22DE6437}
+		{FB3180FE-1D35-4BE5-928F-6F4B142DAFFB} = {D5F90959-7D8E-4BD8-A7B9-2A32100C2F93}
+		{F37CF960-A91C-4B22-995B-0EAEE08C5BF7} = {F0373094-BDD4-4C67-8D84-1CBFD2993718}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {243D0214-4FB5-41AA-82F7-31CAF55D48E0}
+	EndGlobalSection
+EndGlobal

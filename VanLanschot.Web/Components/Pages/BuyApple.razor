@@ -1,0 +1,85 @@
+﻿@page "/buyapple"
+@using VanLanschot.Web.Models
+
+@rendermode InteractiveServer
+
+@inject VanLanschotApiClient VanlanschotApi
+
+<PageTitle>Buy Apple Stock</PageTitle>
+
+<h1>Buy Apple Stock</h1>
+
+@if (stock is null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <p role="status">Current funds: @funds</p>
+    <p role="status">Current amount of Apple Inc (AAPL) shares : @shares</p>
+    <p role="status">Current stock value Apple Inc (AAPL) : @stock.Price @stock.Currency</p>
+
+    @if (string.IsNullOrEmpty(message))
+    {
+        <label>
+            Amount
+            <InputNumber TValue="int" Value="@amountToBuy" ValueChanged="OnChanged" ValueExpression="() => amountToBuy" />
+        </label>
+        @if (amountToBuy >= 1)
+        {
+            <label>
+                (@(stock.Price* amountToBuy) @stock.Currency)
+            </label>
+            <button class="btn btn-primary" @onclick="BuyClicked">Buy</button>
+        }
+    }
+    else
+    {
+        <p></p>
+        <p role="status">@message</p>
+        <button class="btn btn-primary" @onclick="OkClicked">Ok</button>
+    }
+}
+
+@code {
+    private decimal funds;
+    private decimal shares;
+    private GetStockViewModel? stock;
+    private int amountToBuy = 0;
+    private string message = null;
+
+    private void OnChanged(int value)
+    {
+        amountToBuy = value;
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Update();
+    }
+
+    private async Task Update()
+    {
+        funds = await VanlanschotApi.GetFundsAsync("AppleBuyer");
+        shares = await VanlanschotApi.GetSharesAsync("AppleBuyer", "AAPL");
+        stock = await VanlanschotApi.GetStockValueAsync("AAPL");
+    }
+
+    private async Task OkClicked()
+    {
+        message = null;
+    }
+
+    private async Task BuyClicked()
+    {
+        if (funds < stock?.Price * amountToBuy)
+        {
+            message = "Not enough funds.";
+            return;
+        }
+
+        await VanlanschotApi.BuyShares("AppleBuyer", "AAPL", amountToBuy);
+        await Update();
+        message = $"Succesfully bought {amountToBuy} Apple Inc (AAPL) shares for {stock?.Price * amountToBuy} {stock?.Currency}.";
+    }
+}
