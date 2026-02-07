@@ -1,3 +1,4 @@
+using Microsoft.OpenApi;
 using VanLanschot.Adapters.Data;
 using VanLanschot.Adapters.Handlers;
 using VanLanschot.Core;
@@ -12,6 +13,12 @@ builder.AddServiceDefaults();
 // Add services to the container.
 builder.Services.AddProblemDetails();
 builder.Services.AddControllers();
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "VanLanschot Stock API", Version = "v1" });
+});
+
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<GetFundsHandler>());
 
@@ -31,5 +38,11 @@ app.UseExceptionHandler();
 app.UseRouting();
 app.MapControllers();
 app.MapDefaultEndpoints();
+
+app.UseSwagger();
+app.UseSwaggerUI(options =>
+{
+    options.SwaggerEndpoint("v1/swagger.json", "VanLanschot Stock API V1");
+});
 
 app.Run();
